@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,400;1,600&display=swap');
+
+:root {
+    --success-color: white;
+    --error-color:#B611C1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(0,195,111);
+background: linear-gradient(180deg, rgba(0,195,111,1) 30%, rgba(0,129,105,1) 70%, rgba(0,88,72,1) 100%);
+background-repeat: no-repeat;
+font-family: 'Open Sans', sans-serif;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+margin: 0;
+
+}
+
+.container {
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0  20px;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input::placeholder {
+    color: rgb(255,255,255,0.7)
+}
+
+.form-control input:focus {
+    outline: 0;
+    border: 2px solid black;
+}
+
+.form-control.success input {
+    border: 2px solid white;
+}
+
+.form-control.error input {
+    border: 1.5px solid var(--error-color);
+}
+
+.form-control label {
+    font-weight: bold;
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent ;
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    padding: 7px;
+    box-shadow: 0 3px 5px rgb(0,0,0,0.5);
+    width: 100%;
+}
